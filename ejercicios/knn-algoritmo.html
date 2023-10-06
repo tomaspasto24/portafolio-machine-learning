@@ -101,8 +101,60 @@
             <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
                 <div class="col-sm-12 col-md-10">
                     <div class="ag-blog-post-content">
+                        <h2>
+                            ¿Qué es KNN?
+                        </h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                            KNN es un algoritmo de aprendizaje automático supervisado y sencillo que se puede utilizar
+                            para tareas de clasificación o regresión, y también se usa con frecuencia en la imputación
+                            de valores faltantes. Se basa en la idea de que las observaciones más cercanas a un punto de
+                            datos dado son las observaciones más "similares" en un conjunto de datos, y por lo tanto,
+                            podemos clasificar puntos no previstos en función de los valores de los puntos existentes
+                            más cercanos. Al elegir K, el usuario puede seleccionar la cantidad de observaciones
+                            cercanas a utilizar en el algoritmo.
+                        </p>
+
+                        <h2>
+                            Implementación
+                        </h2>
+                        <p>
+                            Se importan las librerias necesarias para el funcionamiento del algoritmo knn. Luego se
+                            asigna el DataSet dummy que se va a utilizar para la implementación.
+                        </p>
+                        <img src="../assets/images/knn1.png" alt="" class="img-fluid full_img">
+                        <p>
+                            El gráfico de puntos muestra la distribución de los datos en el DataSet, en este caso al
+                            tener dos únicos atributos, se muestra en un plano cartesiano.
+                        </p>
+
+                        <h5>
+                            K = 1
+                        </h5>
+                        <p>
+                            En el siguiente código, se crean los datos a entrenar, con la función zip que convina los
+                            pares de coordenadas x con y, y se crea el modelo de entrenamiento con la función. Se crea
+                            un clasificador knn con parámetro igual a 1, en este caso solo considerará el vecino más
+                            cercano para clasificar los datos.
+                            Se crea el nuevo punto en forma de tupla y se llama a la función predict para predecir el
+                            caso.
+                        </p>
+                        <img src="../assets/images/knn=1.png" alt="" class="img-fluid full_img">
+
+                        <br>
+                        <br>
+                        <br>
+                        <h5>
+                            K = 5
+                        </h5>
+                        <p>
+                            Se realiza el mismo proceso pero para K = 5, lo que resulta en la siguiente gráfica. En este
+                            caso se toman los 5 vecinos más cercanos y votan por sus propias clases.
+                        </p>
+                        <img src="../assets/images/knn=5.png" alt="" class="img-fluid full_img">
+
+                        <h5>Conclusión</h5>
+                        <p>
+
                         </p>
                     </div>
                 </div>
