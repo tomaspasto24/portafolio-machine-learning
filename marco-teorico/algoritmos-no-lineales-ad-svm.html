@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <title>Portafolio Tomás Silva</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <meta name="keywords" content=" " />
+    <meta name="developer" content="Tomás Silva">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="shortcut icon" href="../assets/images/apple-icon.png">
+    <link rel="shortcut icon" sizes="72x72" href="../assets/images/apple-icon-72x72.png">
+    <link rel="shortcut icon" sizes="114x114" href="../assets/images/apple-icon-114x114.png">
+
+    <!-- Font-->
+    <link href="../assets/images/nlineal3.png" <!-- Font Awesome -->
+    <link rel="stylesheet" href="../assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/plugins/css/bootstrap.min.css">
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/owl.css">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="../assets/plugins/css/jquery.fancybox.min.css">
+    <!-- Anime CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/revealer.css">
+    <!-- Aos CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/aos.css">
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/animate.css">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+
+
+</head>
+<h2></h2>
+
+<body class="black-bg body-2">
+    <!--
+    ===================
+        NAVIGATION
+    ===================
+    -->
+    <header class="black-bg mh-header nav-scroll fixed-top mh-xss-mobile-nav" id="zb-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" alt=""
+                            class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon icon">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-0 ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Marco teórico</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../ejercicios/index.html">Algoritmos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../casos-estudio/index.html">Casos de estudio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="section relative portfolio-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mx-auto">
+                    <div class="portfolio-title wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".1s">
+                        <h1>Algoritmos No Lineales - AD y SVM </h1>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ag-blog-single-page">
+        <div class="container">
+            <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
+                <div class="col-sm-12 col-md-10">
+                    <div class="ag-blog-post-content">
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/data-prepare.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h2>CART (Árboles de decisión)</h2>
+                        <p>
+                            Los aboles de decisión son los más sencillos y más poderosos en machine learning. Son muy
+                            usados
+                            cuando tenemos set de datos relativamente complejos.
+                        </p>
+                        <p>
+                            Proporciona una base fundamental para algoritmos como bagged decision trees, random forest y
+                            boosted decision trees.
+                        </p>
+                        <p>
+                            La representación del modelo CART es un árbol binario. Cada nodo representa una sola
+                            variable de
+                            entrada (x) y un punto de división en esa variable (suponiendo que la variable sea
+                            numérica). El
+                            nodo hoja contiene la variable de salida (y) que se usa para realizar las predicciones.
+                        </p>
+
+
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal1.png" alt="" class="img-fluid" />
+                        </div>
+
+                        <h3> Representado como un conjunto de reglas</h3>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal2.png" class="img-fluid" />
+                        </div>
+
+                        <h3> Hacer predicciones</h3>
+                        <p>
+
+                            Con el modelo CART representado anteriormente, realizar predicciones se hace sencillo. Dada
+                            una
+                            nueva entrada, el árbol se atraviesa evaluando la entrada específica iniciada en el nodo
+                            raíz
+                            del árbol. Puedes pensar en cada variable de entrada como una dimensión en un espacio de
+                            dimensión p. El árbol de decisión lo divide en rectángulos (cuando p = 2 variables de
+                            entrada) o
+                            hiperectángulos con más entradas. Los nuevos datos se filtran a través del árbol y aterrizan
+                            en
+                            cada uno de los rectángulos.
+                        </p>
+                        <p>
+                            Para los problemas de modelado predictivo de regresión, la función de costo que se minimiza
+                            para
+                            elegir los puntos de saliva es el error de suma al cuadrado en todas las muestras de
+                            entrenamiento que se encuentran dentro del rectángulo:
+
+                        </p>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal3.png" class="img-fluid" />
+                        </div>
+
+                        <h3> Criterio de detención</h3>
+                        <p>
+
+                            El procedimiento de división binaria recursiva descrito anteriormente necesita saber cuándo
+                            dejar de dividir mientras se abre camino por el árbol con los datos de entrenamiento. El
+                            procedimiento de detención más común es utilizar un recuento mínimo en el número de
+                            instancias
+                            de entrenamiento asignadas a cada nodo de la hoja. Si el recuento es inferior a algún
+                            mínimo,
+                            entonces la división no se acepta y el nodo se toma como un nodo de hoja final. El recuento
+                            de
+                            miembros de entrenamiento se ajusta al conjunto de datos, por ejemplo, 5 o 10. Define qué
+                            tan
+                            específico será el árbol para los datos de entrenamiento. Demasiado específico (por ejemplo,
+                            un
+                            recuento de 1) y el árbol se ajustará demasiado a los datos de entrenamiento y probablemente
+                            tendrá un bajo rendimiento en el conjunto de pruebas.
+                        </p>
+
+                        <h3> Poda</h3>
+                        <p>
+
+                            El criterio de detención es importante, ya que influye fuertemente en el rendimiento de su
+                            árbol. Puedes usar la poda después de aprender tu árbol para mejorar el rendimiento de
+                            elevación. La complejidad de un árbol de decisiones se define como el número de divisiones
+                            en el
+                            árbol. Se prefieren árboles más simples. Son fáciles de entender (puedes imprimirlos y
+                            mostrarlos a los expertos en la materia), y es menos probable que se ajusten demasiado a tus
+                            datos. El método de poda más rápido y sencillo es trabajar a través de cada nodo de la hoja
+                            en
+                            el árbol y evaluar el efecto de eliminarlo utilizando un conjunto de pruebas de retención.
+                            Los
+                            nodos de hoja se eliminan solo si resulta en una caída en la función de costo general en
+                            todo el
+                            conjunto de pruebas. Dejas de eliminar los nodos cuando no se pueden hacer más mejoras. Se
+                            pueden utilizar métodos de poda más sofisticados, como la poda de complejidad de costos
+                            (también
+                            llamada poda de eslabones más débiles), donde se utiliza un parámetro de aprendizaje (alfa)
+                            para
+                            sopesar si los nodos se pueden eliminar en función del tamaño del subárbol.
+                        </p>
+                        <p>
+                            CART no requiere ninguna preparación especial de datos que no sea una buena representación
+                            del
+                            problema.
+
+                        </p>
+
+                        <h2>Árboles de Regresión</h2>
+                        <p>
+
+                            Los árboles de regresión básicas dividen los datos en grupos más pequeños que son más
+                            homogéneos
+                            con respecto a la respuesta. Para lograr la homogeneidad de los resultados, los árboles de
+                            regresión determinan:
+                            - El predictor a dividir y el valor de división.
+                            - La profundidad o la complejidad del árbol.
+                            - La ecuación de predicción en los nodos hoja
+                        </p>
+
+                        <p>
+
+                            Para la regresión, el modelo comienza con todo el conjunto de datos, S, y busca cada valor
+                            distinto de cada predictor para encontrar el predictor y el valor de división que divide los
+                            datos en dos grupos (S1 y S2) de tal manera que se minimicen las sumas totales de cuadrados
+                            de
+                            error:
+                        </p>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal4.png" class="img-fluid" />
+                        </div>
+
+                        Donde y1 y y2 son los promedios de los resultados del conjunto de entrenamiento dentro de los
+                        grupos S1 y S2, respectivamente.
+
+                        Luego, dentro de cada uno de los grupos S1 y S2, este método busca el predictor y el valor de
+                        división que mejor reduce la SSE. Este metodo se conoce como particionamiento recursivo.
+
+                        SSE para el continuo de divisiones para el número de átomos de carbono (en una escala
+                        transformada). Usando el enfoque del árbol de regresión, el punto de división óptimo para esta
+                        variable es 3,78. La reducción de la ESS asociada con esta división se compara con los valores
+                        óptimos para todos los demás predictores y la división correspondiente al error mínimo de abso
+                        se utiliza para formar subconjuntos S1 y S2. Después de considerar todas las demás variables,
+                        esta variable fue elegida para ser la mejor. Si el proceso se detuviera en este punto, se
+                        pronostica que todas las muestras con valores para este predictor inferiores a 3,78 serían -1,84
+                        (el promedio de los resultados de solubilidad de estas muestras) y todas las muestras por encima
+                        de las divisiones tienen un valor predicho de -4,49:
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal5.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal6.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal7.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal8.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal9.png" class="img-fluid" />
+                        </div>
+
+                        El objetivo de este proceso es encontrar un "árbol del tamaño adecuado" que tenga la tasa de
+                        error más baja. Para hacer esto, penalizamos la tasa de error usando el tamaño del árbol
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal10.png" class="img-fluid" />
+                        </div>
+
+                        Las sanciones más pequeñas tienden a producir modelos más complejos, lo que, en este caso, da
+                        como resultado un árbol más grandes.
+
+                        Los valores más grandes del parámetro de complejidad pueden resultar en un árbol con una
+                        división (es decir, un muñón) o, tal vez, incluso un árbol sin divisiones. Este último resultado
+                        indicaría que ningún predictor explica adecuadamente la variación en el resultado en el valor
+                        elegido del parámetro de complejidad.
+
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal11.png" class="img-fluid" />
+                        </div>
+
+                        También puede manejar los datos que faltan. Al construir el árbol, se ignoran los datos que
+                        faltan. Para cada división, se evalúa una variedad de alter-nativos (llamados splits
+                        sustitutos).
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal12.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal13.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal14.png" class="img-fluid" />
+                        </div>
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal15.png" class="img-fluid" />
+                        </div>
+
+                        <h5> Construir el árbol</h5>
+
+                        1 - Calcular umbrales candidatos
+
+                        2 - Obtener particiones y ECMs para cada umbral
+
+                        3 - Calcular el costo para cada umbral y elegir el umbral con menor valor
+
+                        4 - Repetir pasos 1 a 3 hasta alcanzar criterio de parada.
+
+                        Para evitar que exista overfitting (crezca mucho) utilizamos criterio de parada, que básicamente
+                        es una condición que establece hasta donde se va a subdividir un nodo. El criterio de parada más
+                        usado es el minimo numero de datos por hoja, es decir, también se conoce como pre-poda. También
+                        existe otra forma, que es primero entrenar el árbol y luego eliminar algunas hojas, se conoce
+                        como post-poda. El algoritmo para realizar el recorte es la poda de complejidad de costos, que
+                        funciona con un parámetro de poda (alfa) a medida que aumenta se eliminarán más hojas, con alfa
+                        = 0 no se eliminan hojas.
+
+                        <h2>Árboles de Clasificación</h2>
+
+                        Al igual que con los árboles de regresión, el objetivo de los árboles de clasificación es
+                        dividir los datos en grupos más pequeños y homogéneos. La homogeneidad en este contexto
+                        significa que los nodos de la división son más puros (es decir, contienen una mayor proporción
+                        de una clase en cada nodo).
+
+                        En la clasificación buscamos entrenar un modelo que sea capaz de determinar la categoría a la
+                        que pertenece un dato en particular. La idea es que el modelo pueda calcular la frontera de
+                        decisión que permita asignar el dato a una u otra categoria.
+
+                        Un ejemplo de esto es la clasificación de correos electrónicos entre correos normales o spam.
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal16.png" class="img-fluid" />
+                        </div>
+
+                        <h3> Existen dos alternativas de particionamiento:</h3>
+
+                        <h5> Indice de Gini</h5>
+
+                        Indica el grado de impureza de un nodo, indice gini = 0 indica nodos puros (datos que pertenecen
+                        a una sola categoria), mientras que acercándoosla al 1 indica nodo con impureza, datos de más de
+                        una categoria.
+
+                        Indice de Gini para un nodo dado se define como
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal17.png" class="img-fluid" />
+                        </div>
+
+                        donde p1 y p2 son las probabilidades de Clase 1 y Clase 2, respectivamente.
+
+                        Para saber cuál partición es la mejor se define una función de costo que asigna un puntaje al
+                        nodo padre, dependiendo de los indices gini de los nodos hijos.
+                        <div class="bl_img" id="rev-1">
+                            <img src="../assets/images/nlineal18.png" class="img-fluid" />
+                        </div>
+
+                        <h3> Calcular raíz</h3>
+
+                        Para calcular la raíz:
+
+                        - Se calcula todos los posibles umbrales disponibles (valores intermedios).
+                        - Se calcula indices Gini de los nodos hijos y costo del nodo padre (promedio de los indices
+                        Gini de los hijos).
+                        - Escoger el umbral con menor costo.
+                        - Repetir hasta alcanzar el criterio de parada.
+
+                        Si se siguen particionando, se genera overfitting por lo que al ingresar nuevas variables de
+                        entrada, puede inducir a errores ya que el modelo se adapta mucho al modelo de entrenamiento sin
+                        tener en cuenta nuevas variables. Para evitar el overfitting se tienen dos opciones:
+
+                        - Pre-poda: restringir el crecimiento del árbol durante el entrenamiento. Para esto se utilizan
+                        hiperparametros, que se definen al principio cuando se esta programando. Ya sea profundidad
+                        máxima, el minimo numero de datos que debe tener un nodo, minimo numero de datos de una hoja.
+                        - Post-poda: consiste en eliminar nodos después del entrenamiento. Uno de los métodos más
+                        utilizados es poda de complejidad de costos, consiste en definir un hiperparametro alfa que
+                        controla el nivel de overfitting, con alfa = 0 tendremos el árbol de decisión sin recorte (alto
+                        overfitting) mientras que cada vez que aumente se irán recortando nodos hoja.
+
+                        <h5> Ventajas</h5>
+
+                        - Facilidad con que se pueden interpretar los resultados que arroja el modelo. Se lo puede
+                        mostrar a otras personas de una empresa que no tengan entendimiento del tema.
+                        - Una vez entrenado el árbol podemos determinar cual o cuales fueron los atributos que tuvieron
+                        más relevancia al momento de la clasificación.
+
+                        <h5> Desventajas</h5>
+
+                        - Es un algoritmo codicioso, para calcular el umbral óptimo para cada partición evalúa todas las
+                        posibles opciones.
+
+                        <h2>SVM</h2>
+
+                        Es un algoritmo clásico del ML, su principal uso es en la clasificación binaria, es decir,
+                        cuando se quiere separar un dataset en dos categorias diferentes.
+
+                        Se obtienen muchos hiperplanos, todos ellos logran dividir correctamente el dataset. Para elegir
+                        un hiperplano, se debe seleccionar el hiperplano óptimo, el cual se obtiene detectando los
+                        puntos más cercanos entre una clase y otra, luego encuentra las lineas que lo conecta y traza
+                        una frontera perpendicular. Los vectores de soporte son aquellos que le dan nombre al algoritmo,
+                        son los que se encuentran más cerca entre una clase y otra. El margen es el ancho entre el
+                        hiperplano óptimo y los vectores de soporte.
+
+                        Soft margin: es el margen del algoritmo con un hiperparametro llamado C el cual es ingresado por
+                        el desarrollador en base al error obtenido.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="../assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../assets/plugins/js/bootstrap.min.js"></script>
+    <!-- waypoint  -->
+    <script src="../assets/plugins/js/waypoints.min.js"></script>
+    <!-- owl carousel -->
+    <script src="../assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="../assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="../assets/plugins/js/wow.min.js"></script>
+    <!-- jquery nav -->
+    <script src="../assets/plugins/js/jquery.nav.js"></script>
+    <!-- Isotop -->
+    <script src="../assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="../assets/plugins/js/packery-mode.pkgd.js"></script>
+    <!-- Fancybox js-->
+    <script src="../assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- AOS  -->
+    <script src="../assets/plugins/js/aos.js"></script>
+    <script src="../assets/plugins/js/wow.min.js"></script>
+    <script src="../assets/plugins/js/TweenMax.min.js"></script>
+    <!-- Parallax -->
+    <script src="../assets/plugins/js/simpleParallax.min.js"></script>
+    <!-- <script src="../assets/plugins/js/typed.js"></script> -->
+    <!-- Scroll Effect -->
+    <script src="../assets/plugins/js/anime.min.js"></script>
+    <script src="../assets/plugins/js/scrollMonitor.js"></script>
+    <script src="../assets/plugins/js/scroll-effect.js"></script>
+    <!-- Custom Scripts-->
+    <script src="../assets/js/custom-scripts.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
