@@ -101,9 +101,162 @@
             <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
                 <div class="col-sm-12 col-md-10">
                     <div class="ag-blog-post-content">
+                        <h5>
+                            ¿Qué es Naive Bayes?
+                        </h5>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                            Es uno de los algoritmos más simples y poderosos de aprendizaje automático. Naive bayes es
+                            de aprendizaje supervisado, se utiliza principalmente para clasificación,
+                            útil para trabajar con texto o datos categóricos (por ejemplo “spam” “no spam”). Tiene
+                            ventaja frente a los demás algoritmos al tratar con datasets muy grandes.
                         </p>
+                        <p>
+                            El algoritmo hace una suposición de independencia entre atributos. La suposición de
+                            independencia entre atributos puede no ser siempre cierta, en realidad, el algoritmo asume
+                            que el efecto de un atributo particular de una clase es independiente de otros atributos.
+
+                            Por ejemplo, un solicitante de préstamo es deseable o no dependiendo de sus ingresos,
+                            historial de préstamos y transacciones anteriores, edad y ubicación. Incluso si estos
+                            atributos son interdependientes, se consideran de forma independientes.
+
+                            Otro ejemplo es que si en un mensaje de texto aparece la palabra "buenos" el efecto es
+                            independiente de la palabra "días".
+                        </p>
+                        <h5>
+                            Regla de Bayes
+                        </h5>
+                        <p>
+                            En términos matemáticos se traduce en la siguiente forma:
+                        </p>
+                        <img src="../assets/images/naive-1.png">
+                        <p>
+                            P(A|B): probabilidad de que ocurra A sabiendo que B ya ha ocurrido.
+                            P(B|A): probabilidad de que ocurra B sabiendo que se ha dado A.
+                            P(A): probabilidad de que ocurra A.
+                            P(B): probabilidad de que ocurra B.
+                        </p>
+
+                        <h5>
+                            Ejemplo
+                        </h5>
+
+                        <p>
+                            Supongamos que tenemos que clasificar mensajes de texto como spam o no spam. Para ello se ha
+                            insertado 20 mensajes diferentes.
+                        </p>
+
+                        <p>
+                            Se crea una tabla que indique cuántas veces aparece cada palabra y si el efecto deriva en un
+                            mensaje de spam o no spam.
+                        </p>
+
+                        <img src="../assets/images/naive-2.png">
+
+                        <p>
+                            Para la tabla anterior, se puede calcular la probabilidad de que aparezca "Amigo" en un
+                            correo No Spam.
+                            Para esto, se hace lo siguiente:
+                        </p>
+
+                        <p>
+                            P(Amigo | NoSpam) = 5 / (8 + 5 + 3 + 1) = 5/17 = 0.29
+                        </p>
+
+                        <p>
+                            Se realiza el proceso anterior para cada una de las palabras y se obtiene la siguiente
+                            tabla:
+                        </p>
+
+                        <img src="../assets/images/naive-3.png">
+
+                        <p>
+                            Ahora se puede calcular la probabilidad de que un mensaje sea spam o no spam. De las
+                            siguientes formas:
+                        </p>
+
+                        <p>
+                            P(NoSpam) = (8 + 5 + 3 + 1) / (8 + 5 + 3 + 1 + 2 + 1 + 0 + 4) = 17/24 = 0.71
+                        </p>
+
+                        <p>
+                            P(Spam) = (2 + 1 + 0 + 4) / (8 + 5 + 3 + 1 + 2 + 1 + 0 + 4) = 7/24 = 0.29
+                        </p>
+
+                        <p>
+                            Con esta información, al llegar un mensaje nuevo con la palabra "Estimado" y "Amigo", se
+                            realizan los siguientes calculos para predecir si es spam o no spam:
+                        </p>
+
+                        <p>
+                            P(NoSpam) * P(Estimado | NoSpam) * P(Amigo | NoSpam) = 0.71 * 0.47 * 0.29 = 0.10
+                        </p>
+
+                        <p>
+                            P(Spam) * P(Estimado | Spam) * P(Amigo | Spam) = 0.29 * 0.29 * 0.14 = 0.01
+                        </p>
+
+                        <p>
+                            Como se ve anteriormente, P(NoSpam) > P(Spam), por lo tanto, el mensaje es No Spam.
+                        </p>
+
+                        <h5>
+                            Laplace
+                        </h5>
+
+                        <p>
+                            En caso de que llegue un mensaje con una palabra que se encuentre 0 veces en la tabla, pero
+                            las demás palabras tengan el efecto suficiente como para inducir que el mensaje es spam, se
+                            puede utilizar la regla de Laplace para evitar que la probabilidad sea 0. Es decir, que se
+                            multiplique por 0 las probabilidades y de como resultado 0.
+
+                            Al Aplicar Laplace, se suma en 1 todas las ocurrencias, lo que hace que la palabra que
+                            aparezca 0 veces cambie a 1 y no perjudique a las demás.
+                        </p>
+
+                        <h5>
+                            Implementación detección de spam en SMS
+                        </h5>
+
+                        <p>
+                            En el siguiente código se importan las librerias necesarias.
+                        </p>
+                        <img src="../assets/images/naive-22.png">
+                        <p>
+                            Se crea la variable correos que representa un dataset bastante dummy, luego las etiquetas,
+                            en las que 0 representa no spam y 1 spam. Luego se vectoriza los strings que representan los
+                            correos.
+                        </p>
+                        <img src="../assets/images/naive-23.png">
+
+                        <p>
+                            Se divide el conjunto de datos en entrenamiento y testeo, además se inicializa el modelo
+                            naive bayes multinomial.
+                        </p>
+                        <img src="../assets/images/naive-24.png">
+
+                        <p>
+                            Se entrena el clasificador y se generan las predicciones con los conjuntos de prueba.
+                        </p>
+                        <img src="../assets/images/naive-25.png">
+
+                        <p>
+                            Se evalua el rendimiento del clasificador, obteniendo su exactitud, matriz de confusión y
+                            reporte de clasificación.
+                        </p>
+                        <img src="../assets/images/naive-26.png">
+
+                        <h5>
+                            Conclusión
+                        </h5>
+
+                        <p>
+                            Es un algoritmo muy sencillo de implementar y de entender. Es un modelo facilmente
+                            interpretable. Es muy sencillo de entrenar y ajustar sus hiperparametros, aún asi es muy
+                            poderoso.
+                        </p>
+                        <h5>
+                            Bibliografía
+                        </h5>
                     </div>
                 </div>
             </div>
