@@ -40,7 +40,6 @@
 
 
 </head>
-<h2></h2>
 
 <body class="black-bg body-2">
     <!--
@@ -99,10 +98,10 @@
             <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
                 <div class="col-sm-12 col-md-10">
                     <div class="ag-blog-post-content">
-                        <div class="bl_img" id="rev-1">
+                        <!-- <div class="bl_img" id="rev-1">
                             <img src="../assets/images/data-prepare.jpg" alt="" class="img-fluid">
-                        </div>
-                        <h2>CART (Árboles de decisión)</h2>
+                        </div> -->
+                        <h5>CART (Árboles de decisión)</h5>
                         <p>
                             Los aboles de decisión son los más sencillos y más poderosos en machine learning. Son muy
                             usados
@@ -125,12 +124,12 @@
                             <img src="../assets/images/nlineal1.png" alt="" class="img-fluid" />
                         </div>
 
-                        <h3> Representado como un conjunto de reglas</h3>
+                        <h5> Representado como un conjunto de reglas</h5>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal2.png" class="img-fluid" />
                         </div>
 
-                        <h3> Hacer predicciones</h3>
+                        <h5> Hacer predicciones</h5>
                         <p>
 
                             Con el modelo CART representado anteriormente, realizar predicciones se hace sencillo. Dada
@@ -155,7 +154,7 @@
                             <img src="../assets/images/nlineal3.png" class="img-fluid" />
                         </div>
 
-                        <h3> Criterio de detención</h3>
+                        <h5> Criterio de detención</h5>
                         <p>
 
                             El procedimiento de división binaria recursiva descrito anteriormente necesita saber cuándo
@@ -174,7 +173,7 @@
                             tendrá un bajo rendimiento en el conjunto de pruebas.
                         </p>
 
-                        <h3> Poda</h3>
+                        <h5> Poda</h5>
                         <p>
 
                             El criterio de detención es importante, ya que influye fuertemente en el rendimiento de su
@@ -203,7 +202,7 @@
 
                         </p>
 
-                        <h2>Árboles de Regresión</h2>
+                        <h5>Árboles de Regresión</h5>
                         <p>
 
                             Los árboles de regresión básicas dividen los datos en grupos más pequeños que son más
@@ -226,22 +225,37 @@
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal4.png" class="img-fluid" />
                         </div>
+                        <p>
 
-                        Donde y1 y y2 son los promedios de los resultados del conjunto de entrenamiento dentro de los
-                        grupos S1 y S2, respectivamente.
+                            Donde y1 y y2 son los promedios de los resultados del conjunto de entrenamiento dentro de
+                            los
+                            grupos S1 y S2, respectivamente.
+                        </p>
+                        <p>
 
-                        Luego, dentro de cada uno de los grupos S1 y S2, este método busca el predictor y el valor de
-                        división que mejor reduce la SSE. Este metodo se conoce como particionamiento recursivo.
+                            Luego, dentro de cada uno de los grupos S1 y S2, este método busca el predictor y el valor
+                            de
+                            división que mejor reduce la SSE. Este metodo se conoce como particionamiento recursivo.
+                        </p>
+                        <p>
 
-                        SSE para el continuo de divisiones para el número de átomos de carbono (en una escala
-                        transformada). Usando el enfoque del árbol de regresión, el punto de división óptimo para esta
-                        variable es 3,78. La reducción de la ESS asociada con esta división se compara con los valores
-                        óptimos para todos los demás predictores y la división correspondiente al error mínimo de abso
-                        se utiliza para formar subconjuntos S1 y S2. Después de considerar todas las demás variables,
-                        esta variable fue elegida para ser la mejor. Si el proceso se detuviera en este punto, se
-                        pronostica que todas las muestras con valores para este predictor inferiores a 3,78 serían -1,84
-                        (el promedio de los resultados de solubilidad de estas muestras) y todas las muestras por encima
-                        de las divisiones tienen un valor predicho de -4,49:
+                            SSE para el continuo de divisiones para el número de átomos de carbono (en una escala
+                            transformada). Usando el enfoque del árbol de regresión, el punto de división óptimo para
+                            esta
+                            variable es 3,78. La reducción de la ESS asociada con esta división se compara con los
+                            valores
+                            óptimos para todos los demás predictores y la división correspondiente al error mínimo de
+                            abso
+                            se utiliza para formar subconjuntos S1 y S2. Después de considerar todas las demás
+                            variables,
+                            esta variable fue elegida para ser la mejor. Si el proceso se detuviera en este punto, se
+                            pronostica que todas las muestras con valores para este predictor inferiores a 3,78 serían
+                            -1,84
+                            (el promedio de los resultados de solubilidad de estas muestras) y todas las muestras por
+                            encima
+                            de las divisiones tienen un valor predicho de -4,49:
+                        </p>
+
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal5.png" class="img-fluid" />
                         </div>
@@ -257,28 +271,38 @@
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal9.png" class="img-fluid" />
                         </div>
-
-                        El objetivo de este proceso es encontrar un "árbol del tamaño adecuado" que tenga la tasa de
-                        error más baja. Para hacer esto, penalizamos la tasa de error usando el tamaño del árbol
+                        <p>
+                            El objetivo de este proceso es encontrar un "árbol del tamaño adecuado" que tenga la tasa de
+                            error más baja. Para hacer esto, penalizamos la tasa de error usando el tamaño del árbol
+                        </p>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal10.png" class="img-fluid" />
                         </div>
+                        <p>
 
-                        Las sanciones más pequeñas tienden a producir modelos más complejos, lo que, en este caso, da
-                        como resultado un árbol más grandes.
+                            Las sanciones más pequeñas tienden a producir modelos más complejos, lo que, en este caso,
+                            da
+                            como resultado un árbol más grandes.
+                        </p>
+                        <p>
 
-                        Los valores más grandes del parámetro de complejidad pueden resultar en un árbol con una
-                        división (es decir, un muñón) o, tal vez, incluso un árbol sin divisiones. Este último resultado
-                        indicaría que ningún predictor explica adecuadamente la variación en el resultado en el valor
-                        elegido del parámetro de complejidad.
+                            Los valores más grandes del parámetro de complejidad pueden resultar en un árbol con una
+                            división (es decir, un muñón) o, tal vez, incluso un árbol sin divisiones. Este último
+                            resultado
+                            indicaría que ningún predictor explica adecuadamente la variación en el resultado en el
+                            valor
+                            elegido del parámetro de complejidad.
+                        </p>
 
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal11.png" class="img-fluid" />
                         </div>
+                        <p>
 
-                        También puede manejar los datos que faltan. Al construir el árbol, se ignoran los datos que
-                        faltan. Para cada división, se evalúa una variedad de alter-nativos (llamados splits
-                        sustitutos).
+                            También puede manejar los datos que faltan. Al construir el árbol, se ignoran los datos que
+                            faltan. Para cada división, se evalúa una variedad de alter-nativos (llamados splits
+                            sustitutos).
+                        </p>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal12.png" class="img-fluid" />
                         </div>
@@ -293,108 +317,161 @@
                         </div>
 
                         <h5> Construir el árbol</h5>
+                        <p>
 
-                        1 - Calcular umbrales candidatos
+                            1 - Calcular umbrales candidatos
 
-                        2 - Obtener particiones y ECMs para cada umbral
+                            2 - Obtener particiones y ECMs para cada umbral
 
-                        3 - Calcular el costo para cada umbral y elegir el umbral con menor valor
+                            3 - Calcular el costo para cada umbral y elegir el umbral con menor valor
 
-                        4 - Repetir pasos 1 a 3 hasta alcanzar criterio de parada.
+                            4 - Repetir pasos 1 a 3 hasta alcanzar criterio de parada.
 
-                        Para evitar que exista overfitting (crezca mucho) utilizamos criterio de parada, que básicamente
-                        es una condición que establece hasta donde se va a subdividir un nodo. El criterio de parada más
-                        usado es el minimo numero de datos por hoja, es decir, también se conoce como pre-poda. También
-                        existe otra forma, que es primero entrenar el árbol y luego eliminar algunas hojas, se conoce
-                        como post-poda. El algoritmo para realizar el recorte es la poda de complejidad de costos, que
-                        funciona con un parámetro de poda (alfa) a medida que aumenta se eliminarán más hojas, con alfa
-                        = 0 no se eliminan hojas.
+                            Para evitar que exista overfitting (crezca mucho) utilizamos criterio de parada, que
+                            básicamente
+                            es una condición que establece hasta donde se va a subdividir un nodo. El criterio de parada
+                            más
+                            usado es el minimo numero de datos por hoja, es decir, también se conoce como pre-poda.
+                            También
+                            existe otra forma, que es primero entrenar el árbol y luego eliminar algunas hojas, se
+                            conoce
+                            como post-poda. El algoritmo para realizar el recorte es la poda de complejidad de costos,
+                            que
+                            funciona con un parámetro de poda (alfa) a medida que aumenta se eliminarán más hojas, con
+                            alfa
+                            = 0 no se eliminan hojas.
+                        </p>
 
-                        <h2>Árboles de Clasificación</h2>
-
-                        Al igual que con los árboles de regresión, el objetivo de los árboles de clasificación es
-                        dividir los datos en grupos más pequeños y homogéneos. La homogeneidad en este contexto
-                        significa que los nodos de la división son más puros (es decir, contienen una mayor proporción
-                        de una clase en cada nodo).
-
-                        En la clasificación buscamos entrenar un modelo que sea capaz de determinar la categoría a la
-                        que pertenece un dato en particular. La idea es que el modelo pueda calcular la frontera de
-                        decisión que permita asignar el dato a una u otra categoria.
-
-                        Un ejemplo de esto es la clasificación de correos electrónicos entre correos normales o spam.
+                        <h5>Árboles de Clasificación</h5>
+                        <p>
+                            Al igual que con los árboles de regresión, el objetivo de los árboles de clasificación es
+                            dividir los datos en grupos más pequeños y homogéneos. La homogeneidad en este contexto
+                            significa que los nodos de la división son más puros (es decir, contienen una mayor
+                            proporción
+                            de una clase en cada nodo).
+                        </p>
+                        <p>
+                            En la clasificación buscamos entrenar un modelo que sea capaz de determinar la categoría a
+                            la
+                            que pertenece un dato en particular. La idea es que el modelo pueda calcular la frontera de
+                            decisión que permita asignar el dato a una u otra categoria.
+                        </p>
+                        <p>
+                            Un ejemplo de esto es la clasificación de correos electrónicos entre correos normales o
+                            spam.
+                        </p>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal16.png" class="img-fluid" />
                         </div>
 
-                        <h3> Existen dos alternativas de particionamiento:</h3>
+                        <h5> Existen dos alternativas de particionamiento:</h5>
 
                         <h5> Indice de Gini</h5>
+                        <p>
 
-                        Indica el grado de impureza de un nodo, indice gini = 0 indica nodos puros (datos que pertenecen
-                        a una sola categoria), mientras que acercándoosla al 1 indica nodo con impureza, datos de más de
-                        una categoria.
+                            Indica el grado de impureza de un nodo, indice gini = 0 indica nodos puros (datos que
+                            pertenecen
+                            a una sola categoria), mientras que acercándoosla al 1 indica nodo con impureza, datos de
+                            más de
+                            una categoria.
+                        </p>
+                        <p>
 
-                        Indice de Gini para un nodo dado se define como
+                            Indice de Gini para un nodo dado se define como
+                        </p>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal17.png" class="img-fluid" />
                         </div>
+                        <p>
 
-                        donde p1 y p2 son las probabilidades de Clase 1 y Clase 2, respectivamente.
+                            donde p1 y p2 son las probabilidades de Clase 1 y Clase 2, respectivamente.
+                        </p>
+                        <p>
 
-                        Para saber cuál partición es la mejor se define una función de costo que asigna un puntaje al
-                        nodo padre, dependiendo de los indices gini de los nodos hijos.
+                            Para saber cuál partición es la mejor se define una función de costo que asigna un puntaje
+                            al
+                            nodo padre, dependiendo de los indices gini de los nodos hijos.
+                        </p>
                         <div class="bl_img" id="rev-1">
                             <img src="../assets/images/nlineal18.png" class="img-fluid" />
                         </div>
 
-                        <h3> Calcular raíz</h3>
+                        <h5> Calcular raíz</h5>
+                        <p>
 
-                        Para calcular la raíz:
+                            Para calcular la raíz:
+                        </p>
+                        <p>
 
-                        - Se calcula todos los posibles umbrales disponibles (valores intermedios).
-                        - Se calcula indices Gini de los nodos hijos y costo del nodo padre (promedio de los indices
-                        Gini de los hijos).
-                        - Escoger el umbral con menor costo.
-                        - Repetir hasta alcanzar el criterio de parada.
+                            - Se calcula todos los posibles umbrales disponibles (valores intermedios).
+                            - Se calcula indices Gini de los nodos hijos y costo del nodo padre (promedio de los indices
+                            Gini de los hijos).
+                            - Escoger el umbral con menor costo.
+                            - Repetir hasta alcanzar el criterio de parada.
+                        </p>
+                        <p>
 
-                        Si se siguen particionando, se genera overfitting por lo que al ingresar nuevas variables de
-                        entrada, puede inducir a errores ya que el modelo se adapta mucho al modelo de entrenamiento sin
-                        tener en cuenta nuevas variables. Para evitar el overfitting se tienen dos opciones:
+                            Si se siguen particionando, se genera overfitting por lo que al ingresar nuevas variables de
+                            entrada, puede inducir a errores ya que el modelo se adapta mucho al modelo de entrenamiento
+                            sin
+                            tener en cuenta nuevas variables. Para evitar el overfitting se tienen dos opciones:
+                        </p>
+                        <p>
 
-                        - Pre-poda: restringir el crecimiento del árbol durante el entrenamiento. Para esto se utilizan
-                        hiperparametros, que se definen al principio cuando se esta programando. Ya sea profundidad
-                        máxima, el minimo numero de datos que debe tener un nodo, minimo numero de datos de una hoja.
-                        - Post-poda: consiste en eliminar nodos después del entrenamiento. Uno de los métodos más
-                        utilizados es poda de complejidad de costos, consiste en definir un hiperparametro alfa que
-                        controla el nivel de overfitting, con alfa = 0 tendremos el árbol de decisión sin recorte (alto
-                        overfitting) mientras que cada vez que aumente se irán recortando nodos hoja.
+                            - Pre-poda: restringir el crecimiento del árbol durante el entrenamiento. Para esto se
+                            utilizan
+                            hiperparametros, que se definen al principio cuando se esta programando. Ya sea profundidad
+                            máxima, el minimo numero de datos que debe tener un nodo, minimo numero de datos de una
+                            hoja.
+                            - Post-poda: consiste en eliminar nodos después del entrenamiento. Uno de los métodos más
+                            utilizados es poda de complejidad de costos, consiste en definir un hiperparametro alfa que
+                            controla el nivel de overfitting, con alfa = 0 tendremos el árbol de decisión sin recorte
+                            (alto
+                            overfitting) mientras que cada vez que aumente se irán recortando nodos hoja.
+                        </p>
 
                         <h5> Ventajas</h5>
+                        <p>
 
-                        - Facilidad con que se pueden interpretar los resultados que arroja el modelo. Se lo puede
-                        mostrar a otras personas de una empresa que no tengan entendimiento del tema.
-                        - Una vez entrenado el árbol podemos determinar cual o cuales fueron los atributos que tuvieron
-                        más relevancia al momento de la clasificación.
+                            - Facilidad con que se pueden interpretar los resultados que arroja el modelo. Se lo puede
+                            mostrar a otras personas de una empresa que no tengan entendimiento del tema.
+                            - Una vez entrenado el árbol podemos determinar cual o cuales fueron los atributos que
+                            tuvieron
+                            más relevancia al momento de la clasificación.
+                        </p>
 
                         <h5> Desventajas</h5>
+                        <p>
 
-                        - Es un algoritmo codicioso, para calcular el umbral óptimo para cada partición evalúa todas las
-                        posibles opciones.
+                            - Es un algoritmo codicioso, para calcular el umbral óptimo para cada partición evalúa todas
+                            las
+                            posibles opciones.
+                        </p>
 
-                        <h2>SVM</h2>
+                        <h5>SVM</h5>
+                        <p>
 
-                        Es un algoritmo clásico del ML, su principal uso es en la clasificación binaria, es decir,
-                        cuando se quiere separar un dataset en dos categorias diferentes.
+                            Es un algoritmo clásico del ML, su principal uso es en la clasificación binaria, es decir,
+                            cuando se quiere separar un dataset en dos categorias diferentes.
+                        </p>
+                        <p>
 
-                        Se obtienen muchos hiperplanos, todos ellos logran dividir correctamente el dataset. Para elegir
-                        un hiperplano, se debe seleccionar el hiperplano óptimo, el cual se obtiene detectando los
-                        puntos más cercanos entre una clase y otra, luego encuentra las lineas que lo conecta y traza
-                        una frontera perpendicular. Los vectores de soporte son aquellos que le dan nombre al algoritmo,
-                        son los que se encuentran más cerca entre una clase y otra. El margen es el ancho entre el
-                        hiperplano óptimo y los vectores de soporte.
+                            Se obtienen muchos hiperplanos, todos ellos logran dividir correctamente el dataset. Para
+                            elegir
+                            un hiperplano, se debe seleccionar el hiperplano óptimo, el cual se obtiene detectando los
+                            puntos más cercanos entre una clase y otra, luego encuentra las lineas que lo conecta y
+                            traza
+                            una frontera perpendicular. Los vectores de soporte son aquellos que le dan nombre al
+                            algoritmo,
+                            son los que se encuentran más cerca entre una clase y otra. El margen es el ancho entre el
+                            hiperplano óptimo y los vectores de soporte.
+                        </p>
+                        <p>
 
-                        Soft margin: es el margen del algoritmo con un hiperparametro llamado C el cual es ingresado por
-                        el desarrollador en base al error obtenido.
+                            Soft margin: es el margen del algoritmo con un hiperparametro llamado C el cual es ingresado
+                            por
+                            el desarrollador en base al error obtenido.
+                        </p>
 
                     </div>
                 </div>
