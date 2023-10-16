@@ -101,36 +101,100 @@
             <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
                 <div class="col-sm-12 col-md-10">
                     <div class="ag-blog-post-content">
-                        <h5>
-                            Información General
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                        <h5>Contexto</h5>
+                        <p>El hundimiento del Titanic es uno de los eventos más conocidos en la historia de la
+                            navegación. En la noche del 14 al 15 de abril de 1912, el barco Titanic se hundió tras
+                            chocar con un iceberg en su viaje inaugural desde Southampton a Nueva York. Este trágico
+                            suceso resultó en la pérdida de más de 1,500 vidas de los pasajeros y la tripulación.</p>
+                        <p>Titanic Dataset es un conjunto de datos que recopila información detallada sobre los
+                            pasajeros a bordo del Titanic. Esto incluye datos como la clase de boleto, edad, género,
+                            número de hermanos/cónyuges a bordo, número de padres/hijos a bordo, el puerto de embarque
+                            y, lo más importante, si el pasajero sobrevivió o no a la tragedia.</p>
+                        <p>Este conjunto de datos se ha utilizado en numerosos análisis y proyectos de aprendizaje
+                            automático para predecir la supervivencia de los pasajeros en función de sus características
+                            personales. Además, ha servido como un caso de estudio clásico en la comunidad de ciencia de
+                            datos y aprendizaje automático debido a su relevancia histórica y la variedad de variables
+                            que ofrece.</p>
+
+                        <h5>Entendimiento del negocio</h5>
+                        <p>En este caso de estudio, nos enfocaremos en explorar y analizar los datos del Titanic para
+                            obtener información sobre los factores que contribuyeron a la supervivencia, o no, de los
+                            pasajeros. Nuestro objetivo es comprender mejor qué atributos o variables, como la clase de
+                            boleto, la edad, el género, el número de hermanos/cónyuges a bordo, el número de
+                            padres/hijos a bordo y el puerto de embarque, pueden haber influido en la probabilidad de
+                            supervivencia de los pasajeros.</p>
+
+                        <h5>Conocimiento de datos</h5>
+                        <img src="../assets/images/titanic-12.png" alt="" class="img-fluid full_img">
+
+                        <img src="../assets/images/titanic-1.png" alt="" class="img-fluid full_img">
+
+                        <img src="../assets/images/titanic-2.png" alt="" class="img-fluid full_img">
+
+
+                        <h5>Implementación RapidMiner</h5>
+                        <img src="../assets/images/titanic-3.png" alt="" class="img-fluid full_img">
+
+
+                        <h5>Pre Procesamiento de datos</h5>
+                        <img src="../assets/images/titanic-4.png" alt="" class="img-fluid full_img">
+
+
+                        <p>Lo primero que se hace es visualizar los datos del DataSet, como se puede observar hay
+                            atributos con Missing Values (Valores perdidos), ellos son la edad, identificador de cabina
+                            y bote salvavidas, próximamente se mostrará qué se hace con estos datos.</p>
+                        <p>Se filtran los atributos, dejando fuera número de cabina, bote salvavidas y el número de
+                            ticket, esto porque son atributos que no tienen incidencia sobre la predicción que pueda
+                            llegar a tomar el algoritmo. Además se puede observar que en estos atributos los datos son
+                            alfanuméricos, lo que imposibilita más su comprensión, también evitamos los Missing Values
+                            que tienen el número de cabina y el bote salvavidas.</p>
+
+                        <p>Seguidamente se selecciona al atributo nombre con el rol id, esto para …</p>
+                        <!-- El resto del texto -->
+
+                        <h5>Aplicación del modelo</h5>
+                        <p>Dentro del bloque Cross Validation, particiona el dataset de entrada en k subconjuntos del
+                            mismo tamaño de los k subconjuntos, se conserva un solo subconjunto como conjunto de datos
+                            de prueba (es decir, entrada del subproceso de prueba). Los subconjuntos restantes de k - 1
+                            se utilizan como conjunto de datos de entrenamiento (es decir, entrada del subproceso de
+                            entrenamiento). El proceso de validación cruzada se repite k veces. Los k resultados de las
+                            iteraciones k se promedian (o se combinan de otra manera) para producir una sola estimación.
                         </p>
-                        <h5>
-                            Objetivo
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
-                        </p>
-                        <h5>
-                            Tipo de problema
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
-                        </p>
-                        <h5>
-                            Atributos
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
-                        </p>
-                        <h5>
-                            Desarrollo
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
-                        </p>
+
+                        <p>En el panel izquierdo, que se encuentra dedicado al entrenamiento, se utiliza el algoritmo
+                            Decision Tree, un algoritmo supervisado usado para problemas de clasificación, como es el
+                            caso, y regresión.</p>
+
+                        <p>En el panel derecho, se aplica el modelo y se testea el performance que tuvo el modelo
+                            aplicado por cada k parte.</p>
+
+                        <img src="../assets/images/titanic-5.png" alt="" class="img-fluid full_img">
+
+
+                        <p>A continuación se detallan los parámetros dados al algoritmo.</p>
+
+                        <img src="../assets/images/titanic-6.png" alt="" class="img-fluid full_img">
+
+
+                        <h5>Resultados obtenidos</h5>
+                        <img src="../assets/images/titanic-7.png" alt="" class="img-fluid full_img">
+
+                        <h5>Implementación Python</h5>
+
+                        <h5>Conclusión</h5>
+
+                        <h5>Descarga de recursos</h5>
+
+                        <a href="../assets/Titanic.rmp">
+                            <p>Titanic proceso de RapidMiner</p>
+                        </a>
+                        <a href="../assets/Titanic.csv">
+                            <p>Titanic DataSet</p>
+                        </a>
+                        <a href="../assets/Titanic.rmp">
+                            <p>Titanic Python proceso</p>
+                        </a>
+
                     </div>
                 </div>
             </div>
