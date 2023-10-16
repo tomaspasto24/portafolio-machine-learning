@@ -101,7 +101,12 @@ body {
   background: #07011e;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto", sans-serif;
 }
 
@@ -178,8 +183,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .vertical-middle {
@@ -217,7 +222,7 @@ a:focus {
   -webkit-background-size: cover;
 }
 
-.body-video-bg > .section-video {
+.body-video-bg>.section-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -280,7 +285,8 @@ a:focus {
   text-align: center !important;
 }
 
-.section-header-separator::before, .section-header-separator::after {
+.section-header-separator::before,
+.section-header-separator::after {
   content: '';
   position: absolute;
   width: 57px;
@@ -302,17 +308,17 @@ a:focus {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .mini-separator {
@@ -364,17 +370,17 @@ ul li {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 /**
@@ -586,7 +592,18 @@ p {
  * General CSS
  * -----------------
  */
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -708,7 +725,7 @@ section {
   top: 6%;
   left: -5%;
   -webkit-animation: spin 10s linear infinite;
-          animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 .reveal::before {
@@ -720,11 +737,11 @@ section {
   right: 0;
   bottom: 0;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transform-origin: 0% 0% 0px;
-          transform-origin: 0% 0% 0px;
+  transform-origin: 0% 0% 0px;
   -webkit-animation: reveal 1s 0s ease-in-out forwards;
-          animation: reveal 1s 0s ease-in-out forwards;
+  animation: reveal 1s 0s ease-in-out forwards;
   z-index: 1;
 }
 
@@ -737,57 +754,63 @@ section {
   right: 0;
   bottom: 0;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transform-origin: 0% 0% 0px;
-          transform-origin: 0% 0% 0px;
+  transform-origin: 0% 0% 0px;
   -webkit-animation: reveal 1s .5s ease-in-out forwards;
-          animation: reveal 1s .5s ease-in-out forwards;
+  animation: reveal 1s .5s ease-in-out forwards;
   z-index: 1;
 }
 
 @-webkit-keyframes reveal {
   0% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
+
   50% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     -webkit-transform-origin: 0% 0% 0px;
-            transform-origin: 0% 0% 0px;
+    transform-origin: 0% 0% 0px;
   }
+
   51% {
     -webkit-transform-origin: 100% 50% 0px;
-            transform-origin: 100% 50% 0px;
+    transform-origin: 100% 50% 0px;
   }
+
   100% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
     -webkit-transform-origin: 100% 50% 0px;
-            transform-origin: 100% 50% 0px;
+    transform-origin: 100% 50% 0px;
   }
 }
 
 @keyframes reveal {
   0% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
+
   50% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     -webkit-transform-origin: 0% 0% 0px;
-            transform-origin: 0% 0% 0px;
+    transform-origin: 0% 0% 0px;
   }
+
   51% {
     -webkit-transform-origin: 100% 50% 0px;
-            transform-origin: 100% 50% 0px;
+    transform-origin: 100% 50% 0px;
   }
+
   100% {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
     -webkit-transform-origin: 100% 50% 0px;
-            transform-origin: 100% 50% 0px;
+    transform-origin: 100% 50% 0px;
   }
 }
 
@@ -870,7 +893,7 @@ section {
   display: grid;
   place-items: center;
   -webkit-box-shadow: 11px 38px 73px 0 rgba(51, 51, 51, 0.3);
-          box-shadow: 11px 38px 73px 0 rgba(51, 51, 51, 0.3);
+  box-shadow: 11px 38px 73px 0 rgba(51, 51, 51, 0.3);
   border-radius: 50%;
   margin-left: 25px;
   margin-bottom: 70px;
@@ -1170,7 +1193,7 @@ section {
   outline: none !important;
   background-image: none !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 /*
@@ -1224,7 +1247,7 @@ section {
 
 .portfolio-home .portfolio-box .box-inner img {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
@@ -1270,7 +1293,7 @@ section {
   width: 21px;
   position: relative;
   -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
   -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   transition: -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
@@ -1306,7 +1329,7 @@ section {
   bottom: 0;
   margin: 30px;
   -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
   -webkit-transition: -webkit-transform .6s;
   transition: -webkit-transform .6s;
   transition: transform .6s;
@@ -1333,17 +1356,17 @@ section {
 
 .portfolio-home .portfolio-box .box-inner:hover .box_hover .link_portfolio {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .portfolio-home .portfolio-box .box-inner:hover .box_hover .heading__portfolio {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .portfolio-home .portfolio-box .box-inner:hover img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .portfolio-home .portfolio-box .load-btn {
@@ -1501,7 +1524,7 @@ section {
 
 .blog-content .blog-content-inner .btn {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .no_hover:hover {
@@ -1567,7 +1590,7 @@ section {
 
 .blog-item .btn {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .blog-sidebar .custom_form .form-control {
@@ -1730,7 +1753,7 @@ section {
   border-radius: 15px;
   background-color: #252039;
   -webkit-box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
-          box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
+  box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
   margin-bottom: 50px;
 }
 
@@ -1843,7 +1866,7 @@ section {
   border-radius: 10px;
   background-color: #252039;
   -webkit-box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
-          box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
+  box-shadow: 0 66px 58px 0 rgba(99, 99, 99, 0.1);
   padding: 60px 40px;
   margin-bottom: 100px;
   margin-top: 40px;
@@ -1905,4 +1928,28 @@ section {
   place-items: center;
   border: solid 1.4px rgba(255, 255, 255, 0.4);
 }
+
 /*# sourceMappingURL=styles.css.map */
+
+p {
+  font-size: large !important;
+}
+
+h5 {
+  font-size: 2rem !important;
+}
+
+.full_img {
+  margin: 40px !important;
+}
+
+
+.anchorCS {
+  text-decoration: none; /* Remove underlines from links */
+  color: #0077b6 !important; /* Set the text color for links (you can change this color) */
+}
+
+/* Define a hover effect for anchor elements */
+.anchorCS:hover {
+  text-decoration: underline; /* Add an underline on hover */
+}
