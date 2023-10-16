@@ -1953,3 +1953,12 @@ h5 {
 .anchorCS:hover {
   text-decoration: underline; /* Add an underline on hover */
 }
+
+.code {
+  background-color: black;
+  padding: 10px;
+  color: rgb(0, 255, 13) !important;
+  margin-top: -3%;
+  /* margin: 10px 0px; */
+  /* font-size: 1.2rem; */
+}

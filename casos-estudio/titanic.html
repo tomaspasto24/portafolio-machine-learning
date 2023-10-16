@@ -136,7 +136,7 @@
                         <img src="../assets/images/titanic-3.png" alt="" class="img-fluid full_img">
 
 
-                        <h5>Pre Procesamiento de datos</h5>
+                        <h5>Preparación de datos</h5>
                         <img src="../assets/images/titanic-4.png" alt="" class="img-fluid full_img">
 
 
@@ -179,7 +179,79 @@
                         <h5>Resultados obtenidos</h5>
                         <img src="../assets/images/titanic-7.png" alt="" class="img-fluid full_img">
 
-                        <h5>Implementación Python</h5>
+                        <h5 style="margin-bottom: 10%;">Implementación Python</h5>
+
+                        <p class="code">
+                            import pandas as pd
+                        </p>
+                        <p class="code">
+                            from sklearn.tree import DecisionTreeClassifier
+                        </p>
+                        <p class="code">
+                            from sklearn.model_selection import cross_val_score
+                        </p>
+                        <p class="code">
+                            from sklearn.metrics import accuracy_score
+                        </p>
+                        <p class="code">
+
+                            data = pd.read_csv('Titanic.csv', delimiter=';')
+                        </p>
+                        <p class="code">
+
+
+                            data = data[['Age', 'No of Parents or Children on Board', 'No of Siblings or Spouses on
+                        </p>
+                        <p class="code">
+                            Board',
+                        </p>
+                        <p class="code">
+                            'Passenger Fare', 'Port of Embarkation', 'Sex', 'Survived']]
+                        </p>
+
+                        <p class="code">
+                            data = pd.get_dummies(data, columns=['Port of Embarkation', 'Sex'], prefix='Class')
+                        </p>
+                        <p class="code">
+                            data['Age'].fillna(data['Age'].mean(), inplace=True)
+                        </p>
+                        <p class="code">
+
+                            X = data.drop('Survived', axis=1)
+                        </p>
+                        <p class="code">
+                            y = data['Survived']
+                        </p>
+
+                        <p class="code">
+                            model = DecisionTreeClassifier(criterion='gini', max_depth=9, min_samples_split=4)
+                        </p>
+
+                        <p class="code">
+                            scores = cross_val_score(model, X, y, cv=10)
+                        </p>
+
+                        <p class="code">
+                            print(scores)
+                        </p>
+
+                        <p class="code">
+                            model.fit(X, y)
+                        </p>
+                        <p class="code">
+                            y_pred = model.predict(X)
+                        </p>
+                        <p class="code">
+                            accuracy = accuracy_score(y, y_pred)
+                        </p>
+
+                        <p class="code">
+                            print("Precisión en Cross Validation:", scores.mean())
+                        </p>
+                        <p class="code">
+                            print("Precisión en todo el dataset:", accuracy)
+                        </p>
+
 
                         <h5>Conclusión</h5>
                         <p>
@@ -210,7 +282,7 @@
                         <a href="../assets/Titanic.csv">
                             <p class="anchorCS">Titanic DataSet (Click para ir al enlace)</p>
                         </a>
-                        <a href="../assets/Titanic.rmp">
+                        <a href="../assets/titanic.py">
                             <p class="anchorCS">Titanic Python proceso (Click para ir al enlace)</p>
                         </a>
 
