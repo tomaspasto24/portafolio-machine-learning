@@ -101,36 +101,138 @@
             <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
                 <div class="col-sm-12 col-md-10">
                     <div class="ag-blog-post-content">
-                        <h5>
-                            Contexto
-                        </h5>
-                        <p>
-                            
+                        <h5>Contexto</h5>
+                        <p>Las predicciones precisas de los precios de las viviendas son esenciales para compradores,
+                            vendedores, agentes inmobiliarios e inversores. Por ejemplo, los agentes inmobiliarios
+                            pueden utilizar modelos basados en este conjunto de datos para establecer precios
+                            competitivos de venta, mientras que los compradores pueden tomar decisiones de compra más
+                            informadas. Además, los inversores en bienes raíces pueden identificar oportunidades y
+                            riesgos potenciales en el mercado. En resumen, el "House Pricing Dataset" desempeña un papel
+                            fundamental en la optimización de estrategias comerciales y financieras en el ámbito de la
+                            inversión y la adquisición de propiedades.</p>
+
+                        <p>El machine learning y el data mining desempeñan un papel fundamental en el sector
+                            inmobiliario al permitir el análisis y la extracción de conocimientos valiosos a partir de
+                            grandes volúmenes de datos. Estas tecnologías posibilitan la predicción precisa de los
+                            precios de las propiedades, la identificación de tendencias de mercado, la evaluación de
+                            riesgos, la optimización de estrategias de inversión y la personalización de recomendaciones
+                            para compradores y vendedores. Además, facilitan la automatización de tareas
+                            administrativas, como la gestión de listados, la clasificación de propiedades y la
+                            identificación de oportunidades de inversión. En última instancia, el machine learning y el
+                            data mining en el sector inmobiliario contribuyen a la toma de decisiones más informadas, la
+                            eficiencia operativa y la mejora de la experiencia del cliente, lo que aumenta la
+                            competitividad y el éxito en un mercado en constante evolución.</p>
+
+                        <h5>Entendimiento del negocio</h5>
+                        <p>Como se explica anteriormente una solución de ML puede tomar un papel importante en este
+                            modelo de negocio. El dataset obtenido de UCI, en el cual se tienen las distintas
+                            caracteristas de cada casa, como objetivo se tiene el de aproximar el valor que tiene una
+                            casa al introducir las características de la casa.</p>
+
+                        <h5>Conocimiento de datos</h5>
+                        <img src="../assets/images/house1.png" alt="Captura de pantalla 1" class="img-fluid full_img">
+
+
+                        <p>En los atributos seleccionados no existen Missing Values.</p>
+
+                        <h5>Implementación RapidMiner</h5>
+                        <p>A continuación se muestra el proceso de implementación en RapidMiner. Se utiliza un nuevo
+                            operador llamado Validation, el cual se utiliza para realizar la validación de modelos. Su
+                            función es evaluar el rendimiento de un modelo de aprendizaje automático en un conjunto de
+                            datos.</p>
+
+                        <img src="../assets/images/house2.png" alt="Captura de pantalla 1" class="img-fluid full_img">
+
+                        <h5>Procesamiento de datos</h5>
+                        <p>Se setea el rol del precio de las casas como atributo objetivo.</p>
+
+                        <p>Para procesar los datos, se tuvo en cuenta que el dataset obtenido cuenta con un total de 81
+                            atributos, lo cual hace imposible a la hora de aplicar un modelo como puede ser Regresión
+                            Lineal, en el cual por cada atributo lo considera como una nueva dimensión de
+                            características. Es decir, cada atributo representa una dimensión, en ese espacio. Por lo
+                            anterior, se seleccionan 7 atributos, los cuales se detallan en la sección Conocimiento de
+                            los datos. Estos 7 datos son importantes ya que tienen que ver con el precio de la vivienda,
+                            el cual es el atributo que se quiere predecir.</p>
+
+                        <img src="../assets/images/house3.png" alt="Captura de pantalla 2" class="img-fluid full_img">
+
+                        <h5>Aplicación de los modelos</h5>
+                        <p>En cuanto a la aplicación, en este caso al ser un problema de regresión, se aplica el
+                            algoritmo de Regresión Lineal.</p>
+
+                        <img src="../assets/images/house4.png" alt="Captura de pantalla 3" class="img-fluid full_img">
+
+                        <h5>Resultados obtenidos</h5>
+                        <img src="../assets/images/house5.png" alt="Captura de pantalla 4" class="img-fluid full_img">
+
+                        <h5>Prueba de Feature Selection</h5>
+                        <p>Se probó el algoritmo con varios Foward Selection, Backward Elimination, Optimize Selection.
+                            Todos bajando ligeramente el RMSE, siendo Backward Elimination el que más ventaja sacó a los
+                            demás, dando el RMSE de la segunda foto. Su objetivo es simplificar y mejorar los modelos al
+                            eliminar atributos que pueden no contribuir significativamente a la predicción de la
+                            variable de respuesta.</p>
+
+                        <img src="../assets/images/house6.png" alt="Captura de pantalla 5" class="img-fluid full_img">
+                        <img src="../assets/images/house7.png" alt="Captura de pantalla 6" class="img-fluid full_img">
+
+                        <h5 style="margin-bottom: 10%;">Implementación Python</h5>
+
+                        <p class="code">
+                            import pandas as pd
                         </p>
-                        <h5>
-                            Objetivo
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                        <p class="code">
+                            from sklearn.model_selection import train_test_split
                         </p>
-                        <h5>
-                            Tipo de problema
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                        <p class="code">
+                            from sklearn.linear_model import LinearRegression
                         </p>
-                        <h5>
-                            Atributos
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                        <p class="code">
+                            from sklearn.metrics import mean_squared_error
                         </p>
-                        <h5>
-                            Desarrollo
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque auctor bibendum. Mauris quis vestibulum nisi. Nunc et tincidunt ex. Nunc ultrices in erat at ullamcorper. Integer bibendum mattis massa in egestas. Quisque dolor odio, aliquam quis finibus mattis, interdum vel diam. Fusce mauris lacus, mollis at est a, porta gravida diam. Integer condimentum lectus non nisi pulvinar rhoncus.
+                        <p class="code">
+                            data = pd.read_csv('../data/House Train ')
                         </p>
+                        <p class="code">
+                            data = data[['FullBath', 'GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF',
+                            'TotRmsAbvGrd', 'YearBuilt', 'SalePrice']]
+                        </p>
+                        <p class="code">
+                            X = data.drop('SalePrice', axis=1)
+                        </p>
+                        <p class="code">
+                            y = data['SalePrice']
+                        </p>
+                        <p class="code">
+                            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1992)
+                        </p>
+                        <p class="code">
+                            model = LinearRegression()
+                        </p>
+                        <p class="code">
+                            model.fit(X_train, y_train)
+                        </p>
+                        <p class="code">
+                            y_pred = model.predict(X_test)
+                        </p>
+                        <p class="code">
+                            mse = mean_squared_error(y_test, y_pred)
+                        </p>
+                        <p class="code">
+                            print("Error cuadrático medio:", mse)
+                        </p>
+
+                        <h5>Descarga de recursos</h5>
+                        <a href="../assets/House.rmp">
+                            <p class="anchorCS">House proceso de RapidMiner (Click para ir al enlace)</p>
+                        </a>
+                        <a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data">
+                            <p class="anchorCS">Kaggle House DataSet (Click para ir al enlace)</p>
+
+                        </a>
+                        <a href="../assets/House_process.rmp">
+                            <p class="anchorCS">House Python proceso (Click para ir al enlace)</p>
+                        </a>
+
                     </div>
                 </div>
             </div>

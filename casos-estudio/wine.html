@@ -208,8 +208,75 @@
                         <img src="../assets/images/backward.png" alt="Captura de pantalla 6" class="img-fluid full_img">
 
 
-                        <h5>Implementación Python</h5>
+                        <h5 style="margin-bottom: 10%;">Implementación Python</h5>
 
+                        <p class="code">
+                            import pandas as pd
+                        </p>
+                        <p class="code">
+                            from sklearn.preprocessing import StandardScaler
+                        </p>
+                        <p class="code">
+                            from sklearn.model_selection import cross_val_predict, KFold
+                        </p>
+                        <p class="code">
+                            from sklearn.neighbors import KNeighborsRegressor
+                        </p>
+                        <p class="code">
+                            from sklearn.linear_model import LinearRegression
+                        </p>
+                        <p class="code">
+                            from sklearn.metrics import mean_squared_error
+                        </p>
+                        <p class="code">
+                            winequality_red = pd.read_csv('data/winequality-red')
+                        </p>
+                        <p class="code">
+                            winequality_white = pd.read_csv('data/winequality-white')
+                        </p>
+                        <p class="code">
+                            winequality_combined = pd.concat([winequality_red, winequality_white], ignore_index=True)
+                        </p>
+                        <p class="code">
+                            X = winequality_combined.drop('quality', axis=1)
+                        </p>
+                        <p class="code">
+                            y = winequality_combined['quality']
+                        </p>
+                        <p class="code">
+                            scaler = StandardScaler()
+                        </p>
+                        <p class="code">
+                            X = scaler.fit_transform(X)
+                        </p>
+                        <p class="code">
+                            kf = KFold(n_splits=10, shuffle=True, random_state=1992)
+                        </p>
+                        <p class="code">
+                            knn = KNeighborsRegressor(n_neighbors=5, weights='distance')
+                        </p>
+                        <p class="code">
+                            knn_predictions = cross_val_predict(knn, X, y, cv=kf)
+                        </p>
+                        <p class="code">
+                            knn_mse = mean_squared_error(y, knn_predictions)
+                        </p>
+                        <p class="code">
+                            lr = LinearRegression()
+                        </p>
+                        <p class="code">
+                            lr_predictions = cross_val_predict(lr, X, y, cv=kf)
+                        </p>
+                        <p class="code">
+                            lr_mse = mean_squared_error(y, lr_predictions)
+                        </p>
+                        <p class="code">
+                            print("Error cuadrático medio de k-NN:", knn_mse)
+                        </p>
+                        <p class="code">
+                            print("Error cuadrático medio de regresión lineal:", lr_mse)
+                        </p>
+                        
                         <h5>Descarga de recursos</h5>
                         <a href="../assets/wine_process.rmp">
                             <p class="anchorCS">Wine Quality proceso de RapidMiner (Click para ir al enlace)</p>
