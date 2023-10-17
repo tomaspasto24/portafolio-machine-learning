@@ -1,1 +1,208 @@
-https://www.w3schools.com/python/python_ml_linear_regression.asp
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <title>Portafolio Tomás Silva</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <meta name="keywords" content=" " />
+    <meta name="developer" content="Tomás Silva">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+    <link rel="shortcut icon" href="../assets/images/apple-icon.png">
+    <link rel="shortcut icon" sizes="72x72" href="../assets/images/apple-icon-72x72.png">
+    <link rel="shortcut icon" sizes="114x114" href="../assets/images/apple-icon-114x114.png">
+
+    <!-- Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/plugins/css/bootstrap.min.css">
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/owl.css">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="../assets/plugins/css/jquery.fancybox.min.css">
+    <!-- Anime CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/revealer.css">
+    <!-- Aos CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/aos.css">
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="../assets/plugins/css/animate.css">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+
+
+</head>
+
+<body class="black-bg body-2">
+    <!--
+    ===================
+        NAVIGATION
+    ===================
+    -->
+    <header class="black-bg mh-header nav-scroll fixed-top mh-xss-mobile-nav" id="zb-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.svg" alt=""
+                            class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon icon">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-0 ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../marco-teorico/index.html">Marco teórico</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Algoritmos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../casos-estudio/index.html">Casos de estudio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="section relative portfolio-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mx-auto">
+                    <div class="portfolio-title wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".1s">
+                        <h1>
+                            Regresión Lineal
+                        </h1>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ag-blog-single-page">
+        <div class="container">
+            <div class="row section-separator vertical-middle-content ev-home-padding pb-0">
+                <div class="col-sm-12 col-md-10">
+                    <div class="ag-blog-post-content">
+                        <h5>
+                            Definición
+                        </h5>
+                        <p>
+                            La Regresión Lineal es un algoritmo de aprendizaje automático que se
+                            utiliza para modelar la relación entre una variable dependiente (o variable objetivo) y una
+                            o más variables independientes (o características). Su objetivo principal es comprender y
+                            predecir cómo la variable dependiente cambia cuando una o varias variables independientes se
+                            modifican.
+                        </p>
+                        <p>
+
+                            El nombre "lineal" proviene del hecho de que la regresión lineal modela esta relación
+                            mediante una ecuación lineal, que es una línea recta en un espacio bidimensional o un plano
+                            hiperplano en espacios de dimensiones superiores. La ecuación de la regresión lineal tiene
+                            la forma general:
+                        </p>
+                        <p>
+
+                            <strong>y = β₀ + β₁x₁ + β₂x₂ + ... + βₚxₚ + ɛ</strong>
+                        </p>
+                        <p>
+
+                            Donde:
+                        </p>
+                        <p>
+
+                            y es la variable dependiente que queremos predecir.
+                            β₀ es la intersección en el eje y (el valor de y cuando todas las x son cero).
+                            β₁, β₂, ..., βₚ son los coeficientes que representan la relación entre cada variable
+                            independiente x₁, x₂, ..., xₚ y la variable dependiente y.
+                            ɛ representa el error, que es la diferencia entre el valor observado y el valor predicho por
+                            el modelo.
+                            El proceso de regresión lineal implica encontrar los valores óptimos de los coeficientes
+                            (β₀, β₁, β₂, ..., βₚ) que minimizan el error cuadrático medio (MSE) o alguna otra métrica de
+                            error. Una vez que se encuentran estos coeficientes, puedes utilizar la ecuación lineal para
+                            hacer predicciones sobre la variable dependiente y en función de los valores de las
+                            variables independientes.
+                        </p>
+                        <img src="../assets/images/lineal1.png" alt="" class="img-fluid full_img">
+                        <h5>
+                            A tener en cuenta
+                        </h5>
+                        <p>
+                            Este algoritmo es muy sensible a los outliers, por lo que es importante que los outliers se
+                            eliminen o se traten adecuadamente antes de ajustar el modelo. También se debe tener en
+                            cuenta que requiere que se cumplan ciertas suposiciones, como la linealidad, independencia
+                            de los errores y homocedasticidad. Si estas suposiciones no se cumplen, los resultados
+                            pueden ser poco confiables.
+                        </p>
+                        <h5>
+                            Bibliografía
+                        </h5>
+                        <a href="https://www.youtube.com/watch?v=gfs5bp2j_bA&t=1s">
+                            <p class="anchorCS">Regresión Lineal Simple (Parte 1) - Rocio Salas Laines(Click para ir al enlace)</p>
+                        </a>
+                        <a href="https://aprendeia.com/algoritmo-regresion-lineal-simple-machine-learning/">
+                            <p class="anchorCS">Regresión Lineal – Teoría (Click para ir al
+                                enlace)</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="../assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../assets/plugins/js/bootstrap.min.js"></script>
+    <!-- waypoint  -->
+    <script src="../assets/plugins/js/waypoints.min.js"></script>
+    <!-- owl carousel -->
+    <script src="../assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="../assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="../assets/plugins/js/wow.min.js"></script>
+    <!-- jquery nav -->
+    <script src="../assets/plugins/js/jquery.nav.js"></script>
+    <!-- Isotop -->
+    <script src="../assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="../assets/plugins/js/packery-mode.pkgd.js"></script>
+    <!-- Fancybox js-->
+    <script src="../assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- AOS  -->
+    <script src="../assets/plugins/js/aos.js"></script>
+    <script src="../assets/plugins/js/wow.min.js"></script>
+    <script src="../assets/plugins/js/TweenMax.min.js"></script>
+    <!-- Parallax -->
+    <script src="../assets/plugins/js/simpleParallax.min.js"></script>
+    <!-- <script src="../assets/plugins/js/typed.js"></script> -->
+    <!-- Scroll Effect -->
+    <script src="../assets/plugins/js/anime.min.js"></script>
+    <script src="../assets/plugins/js/scrollMonitor.js"></script>
+    <script src="../assets/plugins/js/scroll-effect.js"></script>
+    <!-- Custom Scripts-->
+    <script src="../assets/js/custom-scripts.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
