@@ -133,7 +133,15 @@
 
 
                         <h5>Implementación RapidMiner</h5>
-                        <img src="../assets/images/titanic-3.png" alt="" class="img-fluid full_img">
+                        <p>
+                            Se aplican dos modelos, uno con el algoritmo Decision Tree y otro con el algoritmo Naive
+                            Bayes. Ambos algoritmos son supervisados, es decir, se le brinda al algoritmo un conjunto de
+                            datos de entrenamiento, en este caso el 70% del dataset, y el algoritmo aprende de estos
+                            datos para luego poder predecir los resultados de un conjunto de datos de prueba.
+                            Tenemos dos bloques de Cross Validation, "CV DT" referido a Decision Tree y "CV NB" referido
+                            a Naive Bayes.
+                        </p>
+                        <img src="../assets/images/titanic-33.png" alt="" class="img-fluid full_img">
 
 
                         <h5>Preparación de datos</h5>
@@ -153,16 +161,22 @@
                         <!-- El resto del texto -->
 
                         <h5>Aplicación del modelo</h5>
-                        <p>Dentro del bloque Cross Validation, particiona el dataset de entrada en k subconjuntos del
+                        <p>Dentro de los bloques Cross Validation, se particiona el dataset de entrada en k subconjuntos
+                            del
                             mismo tamaño de los k subconjuntos, se conserva un solo subconjunto como conjunto de datos
                             de prueba (es decir, entrada del subproceso de prueba). Los subconjuntos restantes de k - 1
                             se utilizan como conjunto de datos de entrenamiento (es decir, entrada del subproceso de
-                            entrenamiento). El proceso de validación cruzada se repite k veces. Los k resultados de las
+                            entrenamiento). El proceso de Cross Validation se repite k veces. Los k resultados de las
                             iteraciones k se promedian (o se combinan de otra manera) para producir una sola estimación.
                         </p>
 
-                        <p>En el panel izquierdo, que se encuentra dedicado al entrenamiento, se utiliza el algoritmo
-                            Decision Tree, un algoritmo supervisado usado para problemas de clasificación, como es el
+                        <h5>
+                            Aplicación Decision Tree
+                        </h5>
+
+                        <p>
+                            En el panel izquierdo, que se encuentra dedicado al entrenamiento, se utiliza el algoritmo
+                            Decision Tree, un algoritmo usado para problemas de clasificación, como es el
                             caso, y regresión.</p>
 
                         <p>En el panel derecho, se aplica el modelo y se testea el performance que tuvo el modelo
@@ -171,13 +185,53 @@
                         <img src="../assets/images/titanic-5.png" alt="" class="img-fluid full_img">
 
 
-                        <p>A continuación se detallan los parámetros dados al algoritmo.</p>
+                        <p>A continuación se detallan los parámetros dados al algoritmo. Los mismos fueron determinados
+                            a partir de prueba y error.</p>
+
+
+                        <p>
+                            <strong>criterion:</strong> es el criterio en el que se seleccionarán los
+                            atributos para la división. En este caso se decidió por gain_ratio el cual ajusta la
+                            ganancia de información para cada atributo para
+                            permitir la amplitud y uniformidad de los valores del atributo.
+                        </p>
+                        <p>
+                            <strong>maximal depth:</strong> Este parámetro se utiliza para restringir la
+                            profundidad del árbol de decisiones. En este caso se pone en 9.
+                        </p>
+                        <p>
+                            <strong>confidence:</strong> Este parámetro especifica el nivel de confianza utilizado para
+                            el cálculo del error pesimista de la poda.
+                        </p>
 
                         <img src="../assets/images/titanic-6.png" alt="" class="img-fluid full_img">
 
+                        <h5>
+                            Aplicación Naive Bayes
+                        </h5>
+
+                        <p>
+                            Se aplica lo mismo que el modelo anterior, pero con la diferencia de que se utiliza el Naive
+                            Bayes. Este algoritmo es efectivo en problemas de clasificación. Se basa en el teorema de
+                            Bayes
+                            y es útil para modelar la probabilidad condicional de que un punto de datos pertenezca a una
+                            clase en función de sus características.
+                        </p>
+                        <img src="../assets/images/titanic-88.png" alt="" class="img-fluid full_img">
 
                         <h5>Resultados obtenidos</h5>
+                        <h5>Decision Tree</h5>
+                        <p>
+                            Como se ve en la imagen, el modelo tiene una precisión de 80%, es decir, que el modelo es
+                            capaz de predecir con un 80% de precisión si un pasajero sobrevivió o no.
+                        </p>
                         <img src="../assets/images/titanic-7.png" alt="" class="img-fluid full_img">
+
+                        <h5>Naive Bayes</h5>
+                        <p>
+                            Naive Bayes lo sigue con una precisión de 76% aproximadamente.
+                        </p>
+                        <img src="../assets/images/titanic-99.png" alt="" class="img-fluid full_img">
 
                         <h5 style="margin-bottom: 10%;">Implementación Python</h5>
 
@@ -265,13 +319,18 @@
                             valores faltantes en algunos de los atributos clave, como la edad.
 
                             Luego, implementamos un modelo utilizando el algoritmo Decision Tree y lo evaluamos
-                            utilizando validación cruzada. Esto nos permitió obtener una estimación de la precisión del
+                            utilizando Cross Validation. Esto nos permitió obtener una estimación de la precisión del
                             modelo en la predicción de la supervivencia de los pasajeros.
 
                             Los resultados obtenidos nos han proporcionado información valiosa sobre cómo ciertos
                             atributos, como la clase de boleto, la edad y el género, pueden haber influido en la
-                            probabilidad de supervivencia de los pasajeros. A medida que continuamos con este proyecto,
-                            esperamos refinar nuestro modelo y obtener conclusiones más sólidas.
+                            probabilidad de supervivencia de los pasajeros.
+
+                            Acerca de la precisión del modelo, se puede decir que es bastante buena, ya que el modelo
+                            ambos modelos utilizados dieron una precisión alta. Siendo Decision Tree el algoritmo de
+                            cabecera. Sin embargo, se puede mejorar realizando investigaciones acerca del contexto,
+                            conversando con expertos en el tema y agregando más atributos al dataset, como por ejemplo
+                            el estado de salud de los pasajeros, si tenían alguna enfermedad, etc.
                         </p>
 
                         <h5>Descarga de recursos</h5>
